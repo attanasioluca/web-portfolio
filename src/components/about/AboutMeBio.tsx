@@ -7,7 +7,7 @@ import {
   VStack,
   useColorModeValue,
 } from "@chakra-ui/react";
-import profileImage from "../../images/profile.jpeg";
+import profileImage from "../../images/profile.png";
 import {AboutMeContext} from "../../context/AboutMeContext";
 
 const AboutMeBio = () => {
