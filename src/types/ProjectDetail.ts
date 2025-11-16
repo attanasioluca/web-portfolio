@@ -6,10 +6,10 @@ export interface ProjectSection {
   export interface ProjectDetail {
     id: number | string;
     title: string;
+    shortTitle: string,
     category: string;
     img: string;
     repo: string;
     date: string;
-    sections: ProjectSection[];
   }
   

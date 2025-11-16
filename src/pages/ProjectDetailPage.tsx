@@ -16,13 +16,20 @@ import { projectsDetails } from "../data/projectDetails";
 import type { ProjectDetail } from "../types/ProjectDetail";
 import { FiGithub } from "react-icons/fi";
 import rehypeRaw from "rehype-raw";
+import { useBreakpointValue } from "@chakra-ui/react";
 
 const ProjectDetailPage = () => {
     const { id } = useParams();
     const project: ProjectDetail | undefined = projectsDetails.find(
         (p) => p.id.toString() === id
     );
-
+    const responsiveTitle = useBreakpointValue({
+        base: project?.shortTitle,   // phones
+        sm: project?.shortTitle,     // small screens
+        md: project?.title,          // tablets+
+        lg: project?.title,         // norml
+        xl: project?.title,
+      });
     const text = useColorModeValue("gray.800", "gray.100");
     const githubButtonBg = useColorModeValue("gray.200", "gray.700");
     const borderCol = useColorModeValue("gray.200", "gray.700");
@@ -92,7 +99,7 @@ const ProjectDetailPage = () => {
                 <VStack>
                     {/* Title */}
                     <Heading mb={1} color={text}>
-                        {project.title}
+                        {responsiveTitle}
                     </Heading>
                     {/* Category & Date */}
                     <Text
