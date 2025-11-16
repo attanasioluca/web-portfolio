@@ -8,6 +8,7 @@ export interface ProjectSection {
     title: string;
     category: string;
     img: string;
+    repo: string;
     date: string;
     sections: ProjectSection[];
   }

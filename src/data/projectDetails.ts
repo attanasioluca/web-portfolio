@@ -1,6 +1,6 @@
 import type { ProjectDetail } from "../types/ProjectDetail";
 import CarRacingImg from "../images/projects/car-racing.webp";
-import Ros2Img from "../images/projects/ros2-franka.webp";
+import MusicFinderImg from "../images/projects/musicfinder.webp";
 import GameFinderImg from "../images/projects/gamefinder copy.webp"
 export const projectsDetails: ProjectDetail[] = [
   // ----------------------
@@ -11,7 +11,8 @@ export const projectsDetails: ProjectDetail[] = [
     title: "DDQN Agent Reaching Superhuman Scores in CarRacing-v2",
     category: "Reinforcement Learning",
     img: CarRacingImg,
-    date: "2024",
+    repo: "CarRacing-DQN-CNN",
+    date: "2025",
     sections: [
       {
         title: "Overview",
@@ -32,32 +33,44 @@ export const projectsDetails: ProjectDetail[] = [
   },
 
   // ----------------------
-  // 2. ROS2 ROBOT ARM
+  // 2. MUSICFINDER
   // ----------------------
   {
-    id: "ros2-arm",
-    title: "Programming and Controlling a Virtual Franka Emika Arm in ROS2 + MoveIt2",
-    category: "Robotics / Motion Planning",
-    img: Ros2Img,
-    date: "2024",
+    id: "musicfinder",
+    title: "MusicFinder — Spotify-Powered Music Discovery Platform",
+    category: "Full Stack / Spotify API",
+    img: MusicFinderImg,
+    date: "2025",
+    repo: "MusicFinder",
     sections: [
       {
         title: "Overview",
         body:
-          "I developed and controlled a virtualized Franka Emika robotic arm in Gazebo using ROS2 Humble and MoveIt2. The project included kinematics, planning, grasping, and executing trajectories for pick-and-place tasks.",
+          "MusicFinder is a full-stack web application that integrates with the Spotify Web API to authenticate users, sync their listening data, and provide personalized music discovery. The system stores user activity in MongoDB and offers curated recommendations alongside search, sorting, and filtering features.",
+      },
+      {
+        title: "Core Features",
+        body:
+          "• Spotify OAuth authentication with access/refresh token handling.\n" +
+          "• Automatic syncing of saved tracks, top artists, top genres, and recently played songs.\n" +
+          "• MongoDB persistence for user data, listening history, and derived genre statistics.\n" +
+          "• Ability to search tracks, filter by category, and browse personalized recommendations.\n" +
+          "• Clean React front-end with responsive UI powered by Chakra UI.\n" +
+          "• Work-in-progress Socket.io instant-messaging feature for friend-to-friend music sharing.",
       },
       {
         title: "Technical Details",
         body:
-          "Implemented motion planning pipelines using OMPL, configured joint limits, added collision objects, and integrated MoveIt's Planning Scene. Also configured inverse kinematics, joint controllers, and executed trajectories in Gazebo using FollowJointTrajectory.",
+          "Built with React + TypeScript on the client and Node.js + Express on the backend. The backend manages Spotify OAuth, token refresh cycles, and all API communication. User data and generated insights are stored in MongoDB using Mongoose. The architecture is designed for modular expansion, including future external recommendation engines once Spotify API limitations are reached.",
       },
       {
         title: "What I Learned",
         body:
-          "This project solidified understanding of modern robotic middleware, TF transforms, controllers, URDF/XACRO modeling, and full motion-planning stacks. It’s a strong demonstration of robotics engineering + software development.",
+          "Deepened expertise in OAuth2 flows, external API rate-limit handling, and full-stack data pipelines. Strengthened backend API design, state management in React, and real-world data modeling in MongoDB. Also explored building scalable real-time features through Socket.io integration.",
       },
     ],
   },
+  
 
   // ----------------------
   // 3. GAMEFINDER
@@ -68,6 +81,7 @@ export const projectsDetails: ProjectDetail[] = [
     category: "Full-Stack Development",
     img: GameFinderImg,
     date: "2024",
+    repo: "GameFinder",
     sections: [
       {
         title: "Overview",
