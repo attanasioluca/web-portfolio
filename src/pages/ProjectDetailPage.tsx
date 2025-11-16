@@ -48,6 +48,7 @@ const ProjectDetailPage = () => {
                         /!\[(.*?)\]\((?!http)(.*?)\)/g,
                         (match, alt, path) => {
                             const absolute = `https://raw.githubusercontent.com/attanasioluca/${project.repo}/main/${path}`;
+                            match; // needed to allow building
                             return `![${alt}](${absolute})`;
                         }
                     )
