@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import ContactForm from "../components/contact/ContactForm";
 import ContactDetails from "../components/contact/ContactDetails";
 
-const MotionFlex = motion(Flex);
+const MotionFlex = motion.create(Flex);
 
 const Contact = () => {
   return (

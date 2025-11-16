@@ -17,7 +17,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import HireMeModal from "../HireMeModal.tsx";
 
-const MotionBox = motion(Box);
+const MotionBox = motion.create(Box);
 
 const AppHeader = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,6 +27,7 @@ const AppHeader = () => {
   const bgIcon = useColorModeValue("white", "gray.800");
   const iconColor = useColorModeValue("gray.700", "gray.200");
 
+
   return (
     <>
       <MotionBox
@@ -35,7 +36,7 @@ const AppHeader = () => {
         w="100%"
         px={4}
         py={4}
-        maxW="1200px"
+        maxW={{ base: "100%", md: "750px", lg: "1000px", xl: "1300px" }}
         mx="auto"
       >
         {/* NAVBAR ROOT */}

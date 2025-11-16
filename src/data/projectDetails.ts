@@ -1,5 +1,5 @@
 import type { ProjectDetail } from "../types/ProjectDetail";
-import CarRacingImg from "../images/projects/car-racing.webp";
+import CarRacingImg from "../images/projects/car-racing.gif";
 import MusicFinderImg from "../images/projects/musicfinder.webp";
 import GameFinderImg from "../images/projects/gamefinder copy.webp"
 export const projectsDetails: ProjectDetail[] = [

@@ -16,7 +16,7 @@ import {
   import developerLight from "../../images/developer.svg";
   import developerDark from "../../images/developer-dark.svg";
   
-  const MotionBox = motion(Box);
+  const MotionBox = motion.create(Box);
   
   const AppBanner = () => {
     const [activeTheme] = useThemeSwitcher();
@@ -34,6 +34,7 @@ import {
         gap={{ base: 12, md: 8 }}
         mt={{ base: 16, md: 20 }}
         px={{ base: 2, md: 0 }}
+        
       >
         {/* LEFT SIDE */}
         <VStack
@@ -100,7 +101,7 @@ import {
                 href="/files/CV-IT.pdf"
                 download="ATTANASIO_LUCA_CV_IT.pdf"
                 leftIcon={<FiArrowDownCircle />}
-                size="sm"
+                size="md"
                 bg="brand.500"
                 color="white"
                 rounded="md"
@@ -115,7 +116,7 @@ import {
                 href="/files/CV-EN.pdf"
                 download="ATTANASIO_LUCA_CV_EN.pdf"
                 leftIcon={<FiArrowDownCircle />}
-                size="sm"
+                size="md"
                 bg="brand.500"
                 color="white"
                 rounded="md"

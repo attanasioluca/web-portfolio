@@ -7,7 +7,7 @@ import { ProjectsProvider } from "../context/ProjectsContext.tsx";
 
 const Home = () => {
   return (
-    <Container maxW="container.lg" py={{ base: 6, md: 10 }}>
+    <Container maxW={{ base: "100%", md: "750px", lg: "1000px", xl: "1300px" }} py={{ base: 6, md: 10 }}>
       {/* Banner */}
       <AppBanner />
 

@@ -3,13 +3,13 @@ import { AboutMeProvider } from "../context/AboutMeContext.tsx";
 import AboutMeBio from "../components/about/AboutMeBio.tsx";
 import { motion } from "framer-motion";
 
-const MotionContainer = motion(Container);
+const MotionContainer = motion.create(Container);
 
 const About = () => {
   return (
     <AboutMeProvider>
       <MotionContainer
-        maxW="container.lg"
+        maxW={{ base: "100%", md: "750px", lg: "1000px", xl: "1300px" }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
